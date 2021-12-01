@@ -1,0 +1,46 @@
+.parallax-mirror {
+    visibility: visible;
+    z-index: -100;
+    position: fixed;
+    top: -159px;
+    left: 0px;
+    overflow: hidden;
+    height: 975px;
+    width: 1343px;
+    background-image: url("/images/background.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header {
+    height: 200px;
+    width: 100%;
+    position: fixed;
+    float: right;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+.activate-nav-list {
+    color: rgb(244, 252, 8);
+    width: 60px;
+}
+.activate-nav-list:hover ~ .nav-list {
+    max-height: inherit;
+    opacity: 1;
+}
+.header-nav {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.nav-list {
+    color: rgb(244, 252, 8);
+    list-style-type: none;
+    padding: 0px;
+    margin: 20px;
+    max-height: 0px;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 300ms ease;
+}
