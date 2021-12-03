@@ -1,100 +1,36 @@
-body {
-    background: #111111;
-    font-family: "Exo", serif;
-    font-size: 1.7rem;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 1.765;
-    color: #757575;
-    margin: 0;
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Raleway:wght@200&display=swap");
+
+* {
+    border: 0;
     padding: 0;
+    margin: 0;
 }
-ul {
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-}
-
-.parallax {
-    visibility: visible;
-    z-index: -100;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    overflow: hidden;
-    height: 968px;
-    width: 1363px;
+body {
+    font-family: "Raleway", sans-serif;
+    font-size: 4em;
+    color: black;
 }
 
-.picture-parallax {
-    position: absolute;
-    top: 0px;
-    left: -11px;
-    height: 924px;
-    width: 1386px;
-    max-width: none;
-}
-
-.header-s {
-    width: 100%;
-    height: 96px;
-    background-color: transparent;
-    position: absolute;
-    top: 0;
-    z-index: 500;
-}
-.nav-header {
-    color: rgb(244, 252, 8);
-    overflow: hidden;
-    z-index: 600;
-}
-.nav-header ul {
+div {
     display: flex;
-    list-style: none;
-}
-.menu {
-    color: rgb(244, 252, 8);
-    width: 60px;
-    font-size: 150%;
-    display: block;
-}
-.nav-list {
-    visibility: hidden;
-}
-.menu:hover {
-    animation-name: nav-animation;
-    animation-duration: 1s;
-}
-.menu:hover .nav-list {
-    max-height: inherit;
-    opacity: 1;
-    visibility: visible;
-    display: block;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
 }
 
-#ball {
-    width: 50px;
-    height: 50px;
-    margin: 50px auto;
-    position: relative;
-    border-radius: 50%;
-    background-color: green;
-    animation-name: bounce;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
+#first > div {
+    background-image: url("/images/fondo2.jpg");
+    background-attachment: fixed;
+    background-size: cover;
 }
-@keyframes bounce {
-    0% {
-        top: 0px;
-    }
-    50% {
-        top: 249px;
-        width: 130px;
-        height: 70px;
-    }
-    100% {
-        top: 0px;
-    }
+
+#mid {
+    background-color: aqua;
+}
+
+#end > div {
+    background-image: url("/images/background.jpg");
+    background-attachment: fixed;
+    background-size: cover;
 }
