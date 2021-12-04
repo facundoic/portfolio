@@ -3,6 +3,8 @@
     <head>
         <link rel="stylesheet" href="{{ asset('/css/customBase.css') }}" type="text/css"> 
         <title>Portfolio</title>
+        <!-- Font Awesome Iconos-->
+        <script src="https://kit.fontawesome.com/393bd27812.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div class="container">
@@ -26,19 +28,65 @@
             
 
             <section class="proyectos" id="section_proyectos">
-                <h1>This is proyectos</h1>
+                <div class="wrapper">
+                    <div class="static-text">Estos son mis proyectos</div>
+                        <ul class="dynamic-text">
+                            <li><span> Proyecto 1</span></li>
+                            <li><span> Proyecto 2</span></li>
+                            <li><span> Proyecto 3</span></li>
+                            <li><span> Proyecto 4</span></li>
+                        </ul>
+                </div>
             </section>
 
             <section class="conocimientos" id="section_conocimientos">
-                <h1>This is conocimientos</h1>
+                <h2>Estos son mis conocimientos.</h2>
             </section>
             
             <section class="contacto" id="section_contacto">
-                <div class="parallax">
                     <br><br>
                 <div class="content">
-                    <h2>This is Contacto</h2>
-                </div>
+                    <h2 class="tittle"><span>Contacto</span></h2> 
+
+                    <div class=grid>
+                        <div class="contact-form">
+                            <h3>Contactate conmigo </h3>
+                            <form>
+                                <p>
+                                    <label>Nombre y Apellido </label>
+                                    <input type="text" name="nombre-completo">
+                                </p>
+                                <p>
+                                    <label>Email</label>
+                                    <input type="email" name="email">
+                                </p>
+                                <p>
+                                    <label>Telefono</label>
+                                    <input type="number" name="telefono">
+                                </p>
+                                <p>
+                                    <label>Contenido del Email</label>
+                                    <textarea rows="6" name="contenido-email">
+                                    </textarea>
+                                </p>
+                                <p>
+                                    <button type="submit" class="boton-enviar">
+                                        Enviar
+                                    </button>
+                                </p>
+                            </form>
+                        </div>
+                        <br>
+                        <div class="contact-info">
+                            <h3>Mas información</h3>
+                            <ul class="ul-contact">
+                                <li><i class="far fa-envelope"></i> facundoic94@gmail.com</li>
+                                <li><i class="fab fa-github"></i> https://github.com/facundoic </li>
+                            </ul>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsum officiis non commodi, eligendi aspernatur voluptas! Aspernatur nesciunt iusto enim.</p>
+                        </div>
+
+                    </div>
                 </div>
             </section>
 
