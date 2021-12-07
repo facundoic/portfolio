@@ -61,15 +61,19 @@
                                     <input type="email" name="email">
                                 </p>
                                 <p>
+                                    <label>Asunto</label>
+                                    <input type="asunto" name="asunto">
+                                </p>
+                                <p>
                                     <label>Telefono</label>
                                     <input type="number" name="telefono">
                                 </p>
-                                <p>
+                                <p class="block">
                                     <label>Contenido del Email</label>
                                     <textarea rows="6" name="contenido-email">
                                     </textarea>
                                 </p>
-                                <p>
+                                <p class="block">
                                     <button type="submit" class="boton-enviar">
                                         Enviar
                                     </button>
