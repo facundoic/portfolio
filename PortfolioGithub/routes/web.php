@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use app\Http\Controllers\HomeController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,3 +18,5 @@ Route::get('/', 'HomeController@index');
 Route::get('/proyectos','ProyectosController@index');
 Route::get('/conocimientos','ConocimientosController@index');
 Route::get('/contacto','ContactoController@index');
+
+Route::post('/contacto','ContactoController@store');

@@ -5,6 +5,11 @@
         <title>Portfolio</title>
         <!-- Font Awesome Iconos-->
         <script src="https://kit.fontawesome.com/393bd27812.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        <!-- Scripts -->
+        <script src="{{ asset('js/base.js')}}"></script>
     </head>
     <body>
         <div class="container">
@@ -51,7 +56,7 @@
                     <div class=grid>
                         <div class="contact-form">
                             <h3>Contactate conmigo </h3>
-                            <form>
+                            <form id="formContacto">
                                 <p>
                                     <label>Nombre y Apellido </label>
                                     <input type="text" name="nombre-completo">
@@ -62,7 +67,7 @@
                                 </p>
                                 <p>
                                     <label>Asunto</label>
-                                    <input type="asunto" name="asunto">
+                                    <input type="text" name="asunto">
                                 </p>
                                 <p>
                                     <label>Telefono</label>
@@ -74,7 +79,7 @@
                                     </textarea>
                                 </p>
                                 <p class="block">
-                                    <button type="submit" class="boton-enviar">
+                                    <button type="submit" id="button-form" class="boton-enviar">
                                         Enviar
                                     </button>
                                 </p>
@@ -82,8 +87,9 @@
                         </div>
                         <br>
                         <div class="contact-info">
+                            @yield("contenido")
                             <h3>Mas información</h3>
-                            <ul class="ul-contact">
+                            <ul>
                                 <li><i class="far fa-envelope"></i> facundoic94@gmail.com</li>
                                 <li><i class="fab fa-github"></i> https://github.com/facundoic </li>
                             </ul>
