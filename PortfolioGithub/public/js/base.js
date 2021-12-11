@@ -12,15 +12,23 @@ $(document).ready(function () {
         let data = new FormData(formElement);
         $.ajax({
             type: "POST",
-            url: "/contacto",
+            url: "/validate-form",
             data: data,
+            dataType: "json",
             processData: false, // tell jQuery not to process the data
             contentType: false, // tell jQuery not to set contentType
             success: function (response) {
-                console.log(response);
+                if (response.status == "error") {
+                    $.each(response.error, function (prefix, value) {
+                        var valor = document.getElementsByClassName(
+                            "error-text " + prefix + "-error"
+                        ).value;
+                        console.log(valor);
+                    });
+                }
             },
             error: function (response) {
-                console.log("error");
+                console.log(response);
             },
         });
     });

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactoMailable;
+use Illuminate\Support\Facades\Validator;
+
 
 class ContactoController extends Controller
 {
@@ -15,9 +17,21 @@ class ContactoController extends Controller
 
     public function store(Request $request)
     {
-        $data = $request->all();
+        
+        $validatedData = Validator::make($request->all(),[
+            "nombre-completo" => 'required',
+            "email" => 'required',
+            "contenido-email" => 'required'
+        ]);
+        
 
-        return $data;
+        if($validatedData->fails())
+        {
+            return response()->json(['status'=>'error','error'=>$validatedData->errors()->toArray()]);
+        }else
+        {
+            return response()->json(['status'=>'validated','msg'=>'Validated']);  
+        }
         
     }
 }

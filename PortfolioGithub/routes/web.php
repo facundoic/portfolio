@@ -19,4 +19,4 @@ Route::get('/proyectos','ProyectosController@index');
 Route::get('/conocimientos','ConocimientosController@index');
 Route::get('/contacto','ContactoController@index');
 
-Route::post('/contacto','ContactoController@store');
+Route::post('/validate-form','ContactoController@store');
