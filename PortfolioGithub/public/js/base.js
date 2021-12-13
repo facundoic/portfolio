@@ -20,10 +20,10 @@ $(document).ready(function () {
             success: function (response) {
                 if (response.status == "error") {
                     $.each(response.error, function (prefix, value) {
-                        var valor = document.getElementsByClassName(
-                            "error-text " + prefix + "-error"
-                        ).value;
-                        console.log(valor);
+                        let clase = "error-text " + prefix + "-error";
+                        let span = (document.getElementsByClassName(
+                            clase
+                        )[0].innerText = value);
                     });
                 }
             },

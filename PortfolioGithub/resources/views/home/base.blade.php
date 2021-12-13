@@ -60,12 +60,12 @@
                                 <p>
                                     <label>Nombre y Apellido </label>
                                     <input type="text" name="nombre-completo">
-                                    <span class="error-text nombre-completo-error">a</span>
+                                    <span class="error-text nombre-completo-error"></span> 
                                 </p>
                                 <p>
                                     <label>Email</label>
                                     <input type="email" name="email">
-                                    <span class="error-text email-error">b</span>
+                                    <span class="error-text email-error"></span>
                                 </p>
                                 <p>
                                     <label>Asunto</label>
@@ -79,7 +79,7 @@
                                     <label>Contenido del Email</label>
                                     <textarea rows="6" name="contenido-email">
                                     </textarea>
-                                    <span class="error-text contenido-email-error">c</span>
+                                    <span class="error-text contenido-email-error"></span>
                                 </p>
                                 <p class="block">
                                     <button type="submit" id="button-form" class="boton-enviar">

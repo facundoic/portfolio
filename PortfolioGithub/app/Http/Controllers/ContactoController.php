@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactoMailable;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
 
@@ -30,6 +30,8 @@ class ContactoController extends Controller
             return response()->json(['status'=>'error','error'=>$validatedData->errors()->toArray()]);
         }else
         {
+            $correo = new ContactoMailable($request->all());
+            Mail::to('emailprueba@hotmail.com')->send($correo);
             return response()->json(['status'=>'validated','msg'=>'Validated']);  
         }
         

@@ -201,3 +201,9 @@ input {
     height: 35px;
     margin-left: 20px;
 }
+
+.error-text {
+    font-size: 0.5em;
+    color: red;
+    text-shadow: bu0px 0px 20px white;
+}
