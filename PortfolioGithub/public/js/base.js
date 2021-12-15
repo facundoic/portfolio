@@ -18,6 +18,7 @@ $(document).ready(function () {
             processData: false, // tell jQuery not to process the data
             contentType: false, // tell jQuery not to set contentType
             success: function (response) {
+                console.log(response);
                 if (response.status == "error") {
                     $.each(response.error, function (prefix, value) {
                         let clase = "error-text " + prefix + "-error";
