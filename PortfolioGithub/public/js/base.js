@@ -26,6 +26,8 @@ $(document).ready(function () {
                             clase
                         )[0].innerText = value);
                     });
+                } else if (response.status == "validated") {
+                    formElement.reset();
                 }
             },
             error: function (response) {
