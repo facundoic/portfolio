@@ -15,8 +15,4 @@ use app\Http\Controllers\HomeController;
 */
 
 Route::get('/', 'HomeController@index');
-Route::get('/proyectos','ProyectosController@index');
-Route::get('/conocimientos','ConocimientosController@index');
-Route::get('/contacto','ContactoController@index');
-
 Route::post('/validate-form','ContactoController@store');
